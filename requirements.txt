@@ -1,0 +1,4 @@
+BeautifulSoup4
+selenium
+webdriver_manager
+twilio
