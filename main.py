@@ -17,12 +17,12 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),optio
 def get_jobs(driver=False):
     if not driver:
         return False
+    
     driver.get("https://somalijobs.com/jobs")
     html = driver.page_source
     soup = BeautifulSoup(html, "html.parser")
 
     jobs_container = soup.find(id="jobs-container")
-
     job_cards = jobs_container.find_all("a",class_="job-middle-grid")
 
     jobs  = ""
