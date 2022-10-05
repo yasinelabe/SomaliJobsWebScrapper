@@ -33,7 +33,6 @@ def get_jobs(driver=False):
         JOB_TIME = job_card.find('span',class_='skl-6').text.split('\n')[2].strip()
         JOB_CATEGORY = job_card.find('span',class_='skl-2').text.split('\n')[2].strip()
         JOB_CITY = job_card.find('span',class_='skl-3').text.split('\n')[2].strip()
-
         JOB_LINK = "https://somalijobs.com"+job_card.attrs['href'].strip()
 
         if JOB_CATEGORY in ["Ict/technology/computers","Data Clerk/collection/enumerators"]:
